@@ -1,89 +1,19 @@
 <link rel="stylesheet" href="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/widget.css">
 <div id="bpmsoftocc-chat"></div>
-<script> 
-    window.bpmsoftoccconfig = {};
-    window.bpmsoftoccconfig.channelId = '64afc436-7b3f-4945-a1da-a305aa92c2ab';
-    window.bpmsoftoccconfig.connectorUrl = 'https://bpmsoft-oc-connector1.cloudbpm.ru';
-<script src="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/widget.js" async></script>
-<script src="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/chunk-vendors.js" async></script>
-
-    // Базовые настройки соединения
-    window.bpmsoftoccconfig.srcUrl = 'https://bpmsoft-oc-widget1.corporate-domain.ru/src';
-    window.bpmsoftoccconfig.fileServerUrl = "https://bpmsoft-oc-fileservice1.corporate-domain.ru";
-    // Текстовые настройки
-    window.bpmsoftoccconfig.chatMessagePlaceholder = "Enter message...";
-    window.bpmsoftoccconfig.chatButtonsPlaceholder = "Please select one of the following options";
-    window.bpmsoftoccconfig.fileLoadingPlaceholder = "Loading file...";
-    window.bpmsoftoccconfig.closeChatCaption = 'Minimize';
-    window.bpmsoftoccconfig.saveFeedCaption = "Save messaging history";
-    window.bpmsoftoccconfig.pdhHeaderCaption = "Messaging with agent history";
-    window.bpmsoftoccconfig.pdfOperatorSignCaption = "Agent phrase";
-    window.bpmsoftoccconfig.pdfClientSignCaption = "My phrase";
-    window.bpmsoftoccconfig.localStorageLifeTime = 30;
-
-    // Настройки клиента и сообщений
-    window.bpmsoftoccconfig.clientId = "";
-    window.bpmsoftoccconfig.disableInputOnButtonMessages = true;
-    window.bpmsoftoccconfig.sendInitialMessageOnWidgetButtonClick = true;
-    window.bpmsoftoccconfig.initialMessageText = 'A client opened the webchat';
-    window.bpmsoftoccconfig.welcomeMessage = null;
-
-    // Формат времени
-    window.bpmsoftoccconfig.timeFormatFuntion = function(timestamp) {
-        var date = new Date(timestamp);
-        return `${date.getHours()}:${(date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes()}`;
-    };
-
-    // Настройки панели каналов
-    window.bpmsoftoccconfig.showChannelPanel = false;
-    window.bpmsoftoccconfig.channelPanelHeader = 'Choose a channel to continue your communication';
-    window.bpmsoftoccconfig.backToChannelChooseCaption = "Back to the list of channels";
-
-    // Настройки загрузки файлов
-    window.bpmsoftoccconfig.enableFileUpload = true;
-    window.bpmsoftoccconfig.errorFileUploadString = "Error";
-    window.bpmsoftoccconfig.successFileUploadString = "Loaded";
-
-    // Визуальные настройки
-    window.bpmsoftoccconfig.widgetButtonColor = "#FFCB02";
-    window.bpmsoftoccconfig.widgetButtonColorLine = "#130658";
-    window.bpmsoftoccconfig.themeColor = "#F9763D";
-    window.bpmsoftoccconfig.isClientTyping = false;
-    window.bpmsoftoccconfig.isEmojiVisible = false;
-    window.bpmsoftoccconfig.operatorInfoMessage = "Your agent is {0}";
-    window.bpmsoftoccconfig.showOperatorNameUnderAvatar = false;
-
-    // Поведенческие настройки
-    window.bpmsoftoccconfig.visible = true;
-    window.bpmsoftoccconfig.canOperatorInitializeChat = false;
-    window.bpmsoftoccconfig.cookieSessionTime = 3000000;
-    window.bpmsoftoccconfig.connectWssWithoutClick = true;
-    window.bpmsoftoccconfig.withoutStartButton = false;
-    window.bpmsoftoccconfig.startButtonSvg = null;
-
-    // Пути к иконкам
-    window.bpmsoftoccconfig.bpmsoftoccDownloadIcon = `${window.bpmsoftoccconfig.srcUrl}/n-download.svg`;
-    window.bpmsoftoccconfig.bpmsoftoccDownloadClientIcon = `${window.bpmsoftoccconfig.srcUrl}/n-downloadClient.svg`;
-    window.bpmsoftoccconfig.operatorAvatar = `${window.bpmsoftoccconfig.srcUrl}/OperatorAvatar.png`;
-    window.bpmsoftoccconfig.footerImageLogo = `${window.bpmsoftoccconfig.srcUrl}/mini-logo-grey.png`;
-    window.bpmsoftoccconfig.attachFileButton = `${window.bpmsoftoccconfig.srcUrl}/n-upload-button.svg`;
-    window.bpmsoftoccconfig.emojiIcon = `${window.bpmsoftoccconfig.srcUrl}/n-smile.svg`;
-    window.bpmsoftoccconfig.pulseImage = `${window.bpmsoftoccconfig.srcUrl}/n-pulseImage.svg`;
-    window.bpmsoftoccconfig.widgetButtonSrc = `${window.bpmsoftoccconfig.srcUrl}/faq-icon.png`;
-    window.bpmsoftoccconfig.headerImageSrc = `${window.bpmsoftoccconfig.srcUrl}/bpmsoft.svg`;
-    window.bpmsoftoccconfig.sendButtonIcon = `${window.bpmsoftoccconfig.srcUrl}/n-send-button.svg`;
-    window.bpmsoftoccconfig.menuButtonIcon = `${window.bpmsoftoccconfig.srcUrl}/more.png`;
-
-    // Список каналов (отключен)
-    window.bpmsoftoccconfig.channelsInPanel = null;
-</script>
-
-<!-- Добавленные стили для изменения цвета сообщений -->
 <style>
+    /* Изменение цвета фона сообщений */
     .bpmsoftoccchat-comment {
         background: #02a250 !important;
     }
+    /* Изменение цвета текста сообщений оператора */
     .bpmsoftoccchat-comment-container-admin p.bpmsoftoccchat- {
         color: #ffffff !important;
     }
 </style>
+<script>
+    window.bpmsoftoccconfig = {};
+    window.bpmsoftoccconfig.channelId = '64afc436-7b3f-4945-a1da-a305aa92c2ab';
+    window.bpmsoftoccconfig.connectorUrl = 'https://bpmsoft-oc-connector1.cloudbpm.ru';
+</script>
+<script src="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/widget.js" async></script>
+<script src="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/chunk-vendors.js" async></script>
